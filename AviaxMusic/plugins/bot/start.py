@@ -32,8 +32,7 @@ async def start_pm(client, message: Message, _):
     if len(message.text.split()) > 1:
         name = message.text.split(None, 1)[1]
         if name[0:4] == "help":
-            keyboard = help_pannel(_)
-           return await message.reply_sticker("CAACAgUAAxkBAAELoThl6ZYbctPBoi3NTDUFe3yH3gyuPAACRwkAAuWUKVa6DikBvKvO3zQE")
+            keyboard = help_pannel(_
             return await message.reply_photo(
                 photo=config.START_IMG_URL,
                 caption=_["help_1"].format(config.SUPPORT_GROUP),
@@ -88,8 +87,7 @@ async def start_pm(client, message: Message, _):
     else:
         out = private_panel(_)
         UP, CPU, RAM, DISK = await bot_sys_stats()
-        await message.reply_photo(
-        return await message.reply_sticker("CAACAgUAAxkBAAELoThl6ZYbctPBoi3NTDUFe3yH3gyuPAACRwkAAuWUKVa6DikBvKvO3zQE")
+        await message.reply_photo(_
             photo=config.START_IMG_URL,
             caption=_["start_2"].format(message.from_user.mention, app.mention, UP, DISK, CPU, RAM),
             reply_markup=InlineKeyboardMarkup(out),
